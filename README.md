@@ -8,3 +8,4 @@ Simple tool for banner code generation
 An example of a banner with embedding code box
 
   * Check example: https://github.com/RDCH106/banner-code-snippet-generator/tree/master/example
+  * Demo: http://rdch106.github.io/banner-code-snippet-generator
