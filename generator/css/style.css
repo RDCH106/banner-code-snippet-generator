@@ -1,0 +1,14 @@
+#generator-form{
+	margin: 10px;
+}
+
+#form-corpus{
+	float: left;
+	width: 650px;
+}
+
+#generator-result{
+	float: left;
+	margin: 10px;
+	margin-top: 45px;
+}
