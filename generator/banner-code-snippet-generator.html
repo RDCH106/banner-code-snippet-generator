@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/script.js"></script>
 
     <title>Banner-code-snippet-generator by RDCH106</title>
   </head>
 
-  <body>
+  <body onload="generateBanner()">
 
   <br>
   <div id="form-corpus">
@@ -25,7 +25,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="banner_img">Banner image</label>  
 			<div class="col-md-4">
-				<input id="banner_img" name="banner_img" type="text" placeholder="" class="form-control input-md" required="">
+				<input id="banner_img" name="banner_img" type="text" placeholder="url" class="form-control input-md" required>
 				<span class="help-block">Banner image URL</span>  
 			</div>
 		</div>
@@ -34,8 +34,8 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="width">Width</label>  
 			<div class="col-md-4">
-				<input id="width" name="width" type="text" placeholder="" class="form-control input-md" required="">
-				<span class="help-block">Banner Width</span>  
+				<input id="width" name="width" type="text" placeholder="width" class="form-control input-md" required>
+				<span class="help-block">Banner Width in pixels</span>  
 			</div>
 		</div>
 
@@ -43,8 +43,8 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="height">Height</label>  
 			<div class="col-md-4">
-				<input id="height" name="height" type="text" placeholder="" class="form-control input-md" required="">
-				<span class="help-block">Banner Height</span>  
+				<input id="height" name="height" type="text" placeholder="height" class="form-control input-md" required>
+				<span class="help-block">Banner Height in pixels</span>  
 			</div>
 		</div>
 
