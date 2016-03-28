@@ -8,11 +8,22 @@ function generateBanner(){
     var generator_result = document.getElementById("generator-result");
     if (getParameterByName('banner_img')!= null && getParameterByName('width') != null){
         //Set input values
+        html = html.replace("Mascando Bits", getParameterByName('name'));
+        html = html.replace("Mascando Bits", getParameterByName('name'));        
         html = html.replace("http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg", getParameterByName('banner_img'));
         html = html.replace("http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg", getParameterByName('banner_img'));
+        html = html.replace("http://rdch106.hol.es/", getParameterByName('website'));
+        html = html.replace("http://rdch106.hol.es/", getParameterByName('website'));
         html = html.replace("250px", (getParameterByName('width')+"px"));
+        
+        html_code = html_code.replace("Mascando Bits", getParameterByName('name'));
+        html_code = html_code.replace("Mascando Bits", getParameterByName('name'));
+        
         html_code = html_code.replace("http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg", getParameterByName('banner_img'));
         html_code = html_code.replace("http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg", getParameterByName('banner_img'));
+        html_code = html_code.replace("http://rdch106.hol.es/", getParameterByName('website'));
+        html_code = html_code.replace("http://rdch106.hol.es/", getParameterByName('website'));
+        html_code = html_code.replace("250px", (getParameterByName('width')+"px"));
         //visualize
         generator_result.innerHTML = "<h4>Preview</h4>"
         var snippet = script + html;
@@ -20,6 +31,7 @@ function generateBanner(){
         generator_result.innerHTML = generator_result.innerHTML + "<h3>Copy this code in your Web:</h3>";
         var snippet_code = script_code + html_code;
         generator_result.innerHTML = generator_result.innerHTML + "<textarea style='width:100%' name='code' id='banner' rows='6' cols='20' onClick='this.select();' readonly='readonly'>" + snippet_code + "</textarea>"
+        
         //alert (getParameterByName('banner_img')+" "+ getParameterByName('width'));
     }
 }
