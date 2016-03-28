@@ -12,3 +12,10 @@
 	margin: 10px;
 	margin-top: 45px;
 }
+
+#preview{
+   background-color:#eee;
+   border: 1px solid #888;
+   border-radius:3px;
+   padding: 7px;
+}
