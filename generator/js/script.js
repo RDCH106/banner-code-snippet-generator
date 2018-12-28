@@ -1,8 +1,8 @@
 var script = "<!-- Javascript Code --> <script> function copyToClipboard(object) {	object.focus();	object.select(); document.execCommand('copy'); alert('Copiado al Portapapeles');	} </script>";
-var html = "<!-- HTML Code --> <div style='width:250px; text-align:center'> <div name='banner-container-image' id='banner-container-image'>	<a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'><img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg' alt='Mascando Bits banner preview'></a>	</div> <br> <div style='width:100%'> <textarea style='width:100%' name='banner' id='banner' rows='6' cols='20' onclick='copyToClipboard(this)' readonly='readonly'> <div name='banner-container' id='banner-container'> <a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'><img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg'></a></div></textarea> </div> <br> <input type='button' value='Copiar' style='width:100%' onclick=\"copyToClipboard(document.getElementById('banner'))\"> </div>"
+var html = "<!-- HTML Code --> <div style='width:250px; text-align:center'> <div name='banner-container-image' id='banner-container-image'>	<a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'><img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg' alt='Mascando Bits banner preview'></a>	</div> <br> <div style='width:100%'> <textarea style='width:100%' name='banner' id='banner' rows='6' cols='20' onclick='copyToClipboard(this)' readonly='readonly'> <div name='banner-container' id='banner-container'> <a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'><img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg' alt='Mascando Bits'></a></div></textarea> </div> <br> <input type='button' value='Copiar' style='width:100%' onclick=\"copyToClipboard(document.getElementById('banner'))\"> </div>"
 
 var script_code = "&lt;!-- Javascript Code --&gt; &lt;script&gt; function copyToClipboard(object) {	object.focus();	object.select(); document.execCommand('copy'); alert('Copiado al Portapapeles');	} &lt;/script&gt;";
-var html_code = "&lt;!-- HTML Code --&gt; &lt;div style='width:250px; text-align:center'&gt; &lt;div name='banner-container-image' id='banner-container-image'&gt;	&lt;a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'&gt;&lt;img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg' alt='Mascando Bits banner preview'&gt;&lt;/a&gt;	&lt;/div&gt; &lt;br&gt; &lt;div style='width:100%'&gt; &lt;textarea style='width:100%' name='banner' id='banner' rows='6' cols='20' onclick='copyToClipboard(this)' readonly='readonly'&gt; &lt;div name='banner-container' id='banner-container'&gt; &lt;a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'&gt;&lt;img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg'&gt;&lt;/a&gt;&lt;/div&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;br&gt; &lt;input type='button' value='Copiar' style='width:100%' onclick=\"copyToClipboard(document.getElementById('banner'))\"&gt; &lt;/div&gt;"
+var html_code = "&lt;!-- HTML Code --&gt; &lt;div style='width:250px; text-align:center'&gt; &lt;div name='banner-container-image' id='banner-container-image'&gt;	&lt;a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'&gt;&lt;img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg' alt='Mascando Bits banner preview'&gt;&lt;/a&gt;	&lt;/div&gt; &lt;br&gt; &lt;div style='width:100%'&gt; &lt;textarea style='width:100%' name='banner' id='banner' rows='6' cols='20' onclick='copyToClipboard(this)' readonly='readonly'&gt; &lt;div name='banner-container' id='banner-container'&gt; &lt;a title='Entrar en Mascando Bits' target='_blank' href='http://rdch106.hol.es/'&gt;&lt;img width='100%' src='http://rdch106.hol.es/wp-content/uploads/2016/02/Mascando_Bits_banner.jpg'alt='Mascando Bits'&gt;&lt;/a&gt;&lt;/div&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;br&gt; &lt;input type='button' value='Copiar' style='width:100%' onclick=\"copyToClipboard(document.getElementById('banner'))\"&gt; &lt;/div&gt;"
 
 function generateBanner(){
     var generator_result = document.getElementById("generator-result");
@@ -11,7 +11,10 @@ function generateBanner(){
         //Set input values//
         ////////////////////
         
+        // Note: replace method only replace first occurrence (useful to control number of replacements)
+        
         // RENDERED HTML
+        html = html.replace("Mascando Bits", getParameterByName('name'));
         html = html.replace("Mascando Bits", getParameterByName('name'));
         html = html.replace("Mascando Bits", getParameterByName('name'));
         html = html.replace("Mascando Bits", getParameterByName('name'));
@@ -23,6 +26,7 @@ function generateBanner(){
         html = html.replace("250px", (getParameterByName('width')+"px"));
         
         // SNIPPET HTML
+        html_code = html_code.replace("Mascando Bits", getParameterByName('name'));
         html_code = html_code.replace("Mascando Bits", getParameterByName('name'));
         html_code = html_code.replace("Mascando Bits", getParameterByName('name'));
         html_code = html_code.replace("Mascando Bits", getParameterByName('name'));
